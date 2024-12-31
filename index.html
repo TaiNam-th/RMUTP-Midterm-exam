@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="เรียนรู้เกี่ยวกับตัวเลขในภาษา Python สำหรับผู้เริ่มต้น">
+    <meta name="keywords" content="python, numbers, programming, tutorial">
+    <title>เริ่มต้นเรียนรู้ตัวเลขในภาษา Python</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/print.css" media="print">
+</head>
+
+<body class="bg-gray-50">
+    <nav class="nav bg-[#2563eb]">
+        <div class="container">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="nav__logo">
+                    <img src="images/logo.svg" alt="Python Numbers Logo" class="h-2 md:h-4">
+                </a>
+                <div class="nav__menu md:flex space-x-6">
+                    <a href="lessons.html" class="nav__link">บทเรียน</a>
+                    <a href="examples.html" class="nav__link">ตัวอย่าง</a>
+                    <a href="exercises.html" class="nav__link">แบบฝึกหัด</a>
+                    <a href="resources.html" class="nav__link">แหล่งข้อมูล</a>
+                </div>
+                <button class="mobile-menu md:hidden">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <header class="bg-[#2563eb] text-white py-16">
+        <div class="container text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">เรียนรู้ Numbers ใน Python</h1>
+            <p class="text-xl mb-8">เริ่มต้นเรียนรู้การใช้งานตัวเลขในภาษา Python แบบง่ายๆ สำหรับผู้เริ่มต้น</p>
+            <a href="lessons.html" class="btn btn--primary">เริ่มเรียนเลย</a>
+        </div>
+    </header>
+
+    <main class="container py-12">
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold text-center mb-8">เนื้อหาการเรียน</h2>
+            <div class="card">
+                <h3 class="text-xl font-bold mb-4">ทำความรู้จักกับตัวเลขใน Python</h3>
+                <ul class="space-y-2">
+                    <li>ภาพรวมของตัวเลขใน Python</li>
+                    <li>ประเภทของตัวเลข</li>
+                    <li>การแปลงชนิดข้อมูลตัวเลข</li>
+                </ul>
+                <a href="lessons.html" class="btn btn--primary mt-4">เริ่มเรียน</a>
+            </div>
+        </section>
+
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold text-center mb-8">ตัวอย่างโค้ด</h2>
+            <div class="card">
+                <div class="code-block">
+                    <pre>
+                        <code>
+                            # ตัวอย่างการใช้งานตัวเลขใน Python
+                            x = 10          # Integer
+                            y = 3.14        # Floating point
+                            z = 2 + 3j      # Complex number
+
+                            # การคำนวณพื้นฐาน
+                            print(f"x + y = {x + y}")
+                            print(f"x * y = {x * y}")
+                            print(f"y / x = {y / x}")
+                        </code>
+                    </pre>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">เกี่ยวกับเรา</h3>
+                    <p>แหล่งเรียนรู้ Python ฟรีสำหรับผู้เริ่มต้น เน้นการอธิบายที่เข้าใจง่าย</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">ลิงก์ที่เกี่ยวข้อง</h3>
+                    <ul class="space-y-2">
+                        <li><a href="https://docs.python.org/3/" class="hover:text-blue-300">Python Documentation</a>
+                        </li>
+                        <li><a href="https://www.python.org/downloads/" class="hover:text-blue-300">ดาวน์โหลด Python</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div
+        class="mobile-menu-panel fixed inset-y-0 right-0 max-w-xs w-full bg-white shadow-xl z-50 transform translate-x-full transition-transform duration-200 ease-in-out">
+        <div class="p-6">
+            <button class="mobile-menu-close absolute top-4 right-4">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+            <nav class="mt-8">
+                <ul class="space-y-4">
+                    <li><a href="lessons.html" class="block text-lg">บทเรียน</a></li>
+                    <li><a href="examples.html" class="block text-lg">ตัวอย่าง</a></li>
+                    <li><a href="exercises.html" class="block text-lg">แบบฝึกหัด</a></li>
+                    <li><a href="resources.html" class="block text-lg">แหล่งข้อมูล</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

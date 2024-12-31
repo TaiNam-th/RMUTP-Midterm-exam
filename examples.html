@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ตัวอย่างการใช้งานตัวเลขใน Python พร้อมคำอธิบาย">
+    <meta name="keywords" content="python examples, python numbers, ตัวอย่าง python">
+    <title>ตัวอย่าง Numbers in Python</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/print.css" media="print">
+</head>
+
+<body class="bg-gray-50">
+    <nav class="nav bg-[#2563eb]">
+        <div class="container">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="nav__logo">
+                    <img src="images/logo.svg" alt="Python Numbers Logo" class="h-2 md:h-4">
+                </a>
+                <div class="nav__menu md:flex space-x-6">
+                    <a href="lessons.html" class="nav__link text-white">บทเรียน</a>
+                    <a href="examples.html" class="nav__link text-white active">ตัวอย่าง</a>
+                    <a href="exercises.html" class="nav__link text-white">แบบฝึกหัด</a>
+                    <a href="resources.html" class="nav__link text-white">แหล่งข้อมูล</a>
+                </div>
+                <button class="mobile-menu md:hidden text-white">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <header class="bg-[#2563eb] text-white py-16">
+        <div class="container text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">ตัวอย่างการใช้งาน</h1>
+            <p class="text-xl mb-8">ตัวอย่างการใช้งานตัวเลขใน Python พร้อมคำอธิบายและผลลัพธ์</p>
+        </div>
+    </header>
+
+    <main class="container py-12">
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold text-center mb-8">Integer (จำนวนเต็ม)</h2>
+            <div class="card">
+                <div class="code-block">
+                    <pre>
+                        <code>
+                            # การใช้งาน Integer
+                            positive = 42        # จำนวนเต็มบวก
+                            negative = -17       # จำนวนเต็มลบ
+                            zero = 0            # ศูนย์
+                            big_number = 1_000_000  # ใช้ _ เพื่อให้อ่านง่าย
+
+                            # แสดงผลและประเภทข้อมูล
+                            print(f"positive: {positive} - type: {type(positive)}")
+                            print(f"negative: {negative} - type: {type(negative)}")
+                            print(f"big number: {big_number:,}")  # แสดงผลแบบมีตัวคั่นหลักพัน
+                        </code>
+                    </pre>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold text-center mb-8">Float (จำนวนทศนิยม)</h2>
+            <div class="card">
+                <div class="code-block">
+                    <pre>
+                        <code>
+                            # การใช้งาน Float
+                            pi = 3.14159
+                            small = 0.0001
+                            scientific = 2.5e-3  # รูปแบบ scientific notation
+                            infinite = float('inf')  # ค่าอนันต์
+
+                            # แสดงผลในรูปแบบต่างๆ
+                            print(f"pi: {pi:.2f}")  # แสดง 2 ตำแหน่งทศนิยม
+                            print(f"scientific: {scientific:e}")  # แสดงในรูปแบบ scientific
+                            print(f"infinite: {infinite}")
+                        </code>
+                    </pre>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold text-center mb-8">Complex Numbers (จำนวนเชิงซ้อน)</h2>
+            <div class="card">
+                <div class="code-block">
+                    <pre>
+                        <code>
+                            # การใช้งาน Complex Numbers
+                            z1 = 2 + 3j          # สร้างโดยตรง
+                            z2 = complex(1, 2)   # สร้างผ่าน constructor
+
+                            # การเข้าถึงส่วนประกอบ
+                            print(f"z1 = {z1}")
+                            print(f"Real part: {z1.real}")
+                            print(f"Imaginary part: {z1.imag}")
+                            print(f"z2 in different format: {z2.real} + {z2.imag}j")
+                        </code>
+                    </pre>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">เกี่ยวกับเรา</h3>
+                    <p>แหล่งเรียนรู้ Python ฟรีสำหรับผู้เริ่มต้น เน้นการอธิบายที่เข้าใจง่าย</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">ลิงก์ที่เกี่ยวข้อง</h3>
+                    <ul class="space-y-2">
+                        <li><a href="https://docs.python.org/3/" class="hover:text-blue-300">Python Documentation</a>
+                        </li>
+                        <li><a href="https://www.python.org/downloads/" class="hover:text-blue-300">ดาวน์โหลด Python</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div
+        class="mobile-menu-panel fixed inset-y-0 right-0 max-w-xs w-full bg-white shadow-xl z-50 transform translate-x-full transition-transform duration-200 ease-in-out">
+        <div class="p-6">
+            <button class="mobile-menu-close absolute top-4 right-4">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+            <nav class="mt-8">
+                <ul class="space-y-4">
+                    <li><a href="lessons.html" class="block text-lg">บทเรียน</a></li>
+                    <li><a href="examples.html" class="block text-lg font-bold">ตัวอย่าง</a></li>
+                    <li><a href="exercises.html" class="block text-lg">แบบฝึกหัด</a></li>
+                    <li><a href="resources.html" class="block text-lg">แหล่งข้อมูล</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

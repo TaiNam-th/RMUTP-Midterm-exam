@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="แบบฝึกหัดการใช้งานตัวเลขใน Python พร้อมเฉลย">
+    <meta name="keywords" content="python exercises, python numbers, แบบฝึกหัด python">
+    <title>แบบฝึกหัด Numbers in Python</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/print.css" media="print">
+</head>
+
+<body class="bg-gray-50">
+    <nav class="nav bg-[#2563eb]">
+        <div class="container">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="nav__logo">
+                    <img src="images/logo.svg" alt="Python Numbers Logo" class="h-2 md:h-4">
+                </a>
+                <div class="nav__menu md:flex space-x-6">
+                    <a href="lessons.html" class="nav__link text-white">บทเรียน</a>
+                    <a href="examples.html" class="nav__link text-white">ตัวอย่าง</a>
+                    <a href="exercises.html" class="nav__link text-white active">แบบฝึกหัด</a>
+                    <a href="resources.html" class="nav__link text-white">แหล่งข้อมูล</a>
+                </div>
+                <button class="mobile-menu md:hidden text-white">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <header class="bg-[#2563eb] text-white py-16">
+        <div class="container text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">แบบฝึกหัด</h1>
+            <p class="text-xl mb-8">ฝึกฝนการใช้งานตัวเลขใน Python ผ่านโจทย์ปัญหาต่างๆ</p>
+        </div>
+    </header>
+
+    <main class="container py-12">
+        <!-- แบบฝึกหัดที่ 1 -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold text-center mb-8">การคำนวณพื้นฐาน</h2>
+            <div class="card p-6">
+                <div class="exercise-item mb-8">
+                    <h3 class="text-xl font-bold mb-4">1. การคำนวณพื้นที่สี่เหลี่ยม</h3>
+                    <div class="mb-4">
+                        <p class="mb-2">จงเขียนโปรแกรมคำนวณพื้นที่สี่เหลี่ยมผืนผ้า โดย:</p>
+                        <ul class="list-disc list-inside mb-4">
+                            <li>รับค่าความกว้างและความยาวจากผู้ใช้</li>
+                            <li>คำนวณพื้นที่</li>
+                            <li>แสดงผลลัพธ์พร้อมหน่วย</li>
+                        </ul>
+                    </div>
+                    <button class="btn btn--primary mb-4" onclick="toggleSolution('solution1')"
+                        class="btn btn--primary mb-4">
+                        แสดง/ซ่อน เฉลย
+                    </button>
+                    <div id="solution1" class="solution hidden">
+                        <div class="bg-gray-100 p-4 rounded-lg">
+                            <pre>
+                                <code>
+                                    # รับค่าจากผู้ใช้
+                                    width = float(input("ความกว้าง (เมตร): "))
+                                    height = float(input("ความยาว (เมตร): "))
+
+                                    # คำนวณพื้นที่
+                                    area = width * height
+
+                                    # แสดงผลลัพธ์
+                                    print(f"พื้นที่สี่เหลี่ยมผืนผ้า = {area:.2f} ตารางเมตร")
+                                </code>
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="exercise-item mb-8">
+                    <h3 class="text-xl font-bold mb-4">2. การแปลงอุณหภูมิ</h3>
+                    <div class="mb-4">
+                        <p class="mb-2">จงเขียนโปรแกรมแปลงอุณหภูมิจากเซลเซียสเป็นฟาเรนไฮต์ โดย:</p>
+                        <ul class="list-disc list-inside mb-4">
+                            <li>รับค่าอุณหภูมิในหน่วยเซลเซียส</li>
+                            <li>ใช้สูตร (C × 9/5) + 32</li>
+                            <li>แสดงผลลัพธ์ทั้งสองหน่วย</li>
+                        </ul>
+                    </div>
+                    <button class="btn btn--primary mb-4" onclick="toggleSolution('solution2')">
+                        แสดง/ซ่อน เฉลย
+                    </button>
+                    <div id="solution2" class="solution hidden">
+                        <div class="bg-gray-100 p-4 rounded-lg">
+                            <pre>
+                                <code>
+                                    # รับค่าอุณหภูมิ
+                                    celsius = float(input("อุณหภูมิ (°C): "))
+
+                                    # คำนวณ
+                                    fahrenheit = (celsius * 9/5) + 32
+
+                                    # แสดงผล
+                                    print(f"{celsius:.1f}°C = {fahrenheit:.1f}°F")
+                                </code>
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- แบบฝึกหัดที่ 2 -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold text-center mb-8">การแปลงชนิดข้อมูล</h2>
+            <div class="card p-6">
+                <div class="exercise-item">
+                    <h3 class="text-xl font-bold mb-4">3. แปลงข้อความเป็นตัวเลข</h3>
+                    <div class="mb-4">
+                        <p class="mb-2">จงเขียนฟังก์ชันที่:</p>
+                        <ul class="list-disc list-inside mb-4">
+                            <li>รับข้อความที่เป็นตัวเลขจากผู้ใช้</li>
+                            <li>แปลงเป็นจำนวนเต็มหรือทศนิยม</li>
+                            <li>จัดการข้อผิดพลาดที่อาจเกิดขึ้น</li>
+                        </ul>
+                    </div>
+                    <button class="btn btn--primary mb-4" onclick="toggleSolution('solution3')">
+                        แสดง/ซ่อน เฉลย
+                    </button>
+                    <div id="solution3" class="solution hidden">
+                        <div class="bg-gray-100 p-4 rounded-lg">
+                            <pre>
+                                <code>
+                                    def convert_to_number(text):
+                                    try:
+                                    # ลองแปลงเป็นจำนวนเต็ม
+                                        return int(text)
+                                    except ValueError:
+                                    try:
+                                    # ถ้าแปลงเป็นจำนวนเต็มไม่ได้ ลองแปลงเป็นทศนิยม
+                                        return float(text)
+                                    except ValueError:
+                                    # ถ้าแปลงไม่ได้ทั้งคู่
+                                        return None
+
+                                    # ทดสอบฟังก์ชัน
+                                    test_values = ["123", "45.67", "abc", "12.0"]
+                                    for value in test_values:
+                                        result = convert_to_number(value)
+                                        print(f"'{value}' -> {result} ({type(result) if result is not None else 'Invalid'})")
+                                </code>
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container">
+            <div>
+                <h3 class="text-xl font-bold mb-4">ลิงก์ที่เกี่ยวข้อง</h3>
+                <ul class="space-y-2">
+                    <li><a href="https://docs.python.org/3/" target="_blank" rel="noopener noreferrer"
+                            class="hover:text-blue-300">Python Documentation</a></li>
+                    <li><a href="https://www.python.org/downloads/" target="_blank" rel="noopener noreferrer"
+                            class="hover:text-blue-300">ดาวน์โหลด Python</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <div
+        class="mobile-menu-panel fixed inset-y-0 right-0 max-w-xs w-full bg-white shadow-xl z-50 transform translate-x-full transition-transform duration-200 ease-in-out">
+        <div class="p-6">
+            <button class="mobile-menu-close absolute top-4 right-4">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+            <nav class="mt-8">
+                <ul class="space-y-4">
+                    <li><a href="lessons.html" class="block text-lg">บทเรียน</a></li>
+                    <li><a href="examples.html" class="block text-lg">ตัวอย่าง</a></li>
+                    <li><a href="exercises.html" class="block text-lg font-bold">แบบฝึกหัด</a></li>
+                    <li><a href="resources.html" class="block text-lg">แหล่งข้อมูล</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

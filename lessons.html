@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="เรียนรู้เกี่ยวกับตัวเลขในภาษา Python - บทเรียนละเอียดพร้อมตัวอย่างโค้ด" />
+    <meta name="keywords" content="python numbers, integers, floating point, complex numbers, python tutorial" />
+    <title>บทเรียน Numbers in Python</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/print.css" media="print" />
+</head>
+
+<body class="bg-gray-50">
+    <nav class="nav bg-[#2563eb]">
+        <div class="container">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="nav__logo">
+                    <img src="images/logo.svg" alt="Python Numbers Logo" class="h-2 md:h-6" />
+                </a>
+                <div class="nav__menu md:flex space-x-6">
+                    <a href="lessons.html" class="nav__link active text-white">บทเรียน</a>
+                    <a href="examples.html" class="nav__link text-white">ตัวอย่าง</a>
+                    <a href="exercises.html" class="nav__link text-white">แบบฝึกหัด</a>
+                    <a href="resources.html" class="nav__link text-white">แหล่งข้อมูล</a>
+                </div>
+                <button class="mobile-menu md:hidden text-white">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <header class="bg-[#2563eb] text-white py-12">
+        <div class="container">
+            <h1 class="text-4xl font-bold mb-4">บทเรียน Numbers in Python</h1>
+            <p class="text-xl">
+                เรียนรู้เกี่ยวกับการใช้งานตัวเลขในภาษา Python
+                ตั้งแต่พื้นฐานไปจนถึงการประยุกต์ใช้งาน
+            </p>
+        </div>
+    </header>
+
+    <main class="container py-8">
+        <aside class="mb-8 p-4 bg-white rounded-lg shadow-md">
+            <h2 class="text-2xl font-bold mb-4">สารบัญ</h2>
+            <ul class="space-y-2">
+                <li>
+                    <a href="#overview" class="text-blue-600 hover:underline">ภาพรวมของตัวเลขใน Python</a>
+                </li>
+                <li>
+                    <a href="#types" class="text-blue-600 hover:underline">ประเภทของตัวเลข</a>
+                    <ul class="ml-4 mt-2 space-y-1">
+                        <li>• Integer (จำนวนเต็ม)</li>
+                        <li>• Floating Point (จำนวนทศนิยม)</li>
+                        <li>• Complex Numbers (จำนวนเชิงซ้อน)</li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#conversion" class="text-blue-600 hover:underline">การแปลงชนิดข้อมูลตัวเลข</a>
+                </li>
+            </ul>
+        </aside>
+
+        <section id="overview" class="mb-12">
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <h2 class="text-3xl font-bold mb-6">ภาพรวมของตัวเลขใน Python</h2>
+                <p class="mb-4">Python มีตัวเลข 3 ชนิดพื้นฐานที่ใช้งานบ่อย:</p>
+                <ul class="list-disc list-inside space-y-2 mb-4">
+                    <li>Integer (int) - จำนวนเต็ม เช่น -5, 0, 42</li>
+                    <li>Floating Point (float) - จำนวนทศนิยม เช่น 3.14, -0.001, 2.0</li>
+                    <li>Complex Numbers (complex) - จำนวนเชิงซ้อน เช่น 2+3j, -1-2j</li>
+                </ul>
+                <div class="bg-blue-50 p-4 rounded-lg">
+                    <p class="font-bold mb-2">ข้อดีของระบบตัวเลขใน Python:</p>
+                    <ul class="list-disc list-inside space-y-2">
+                        <li>ไม่จำกัดขนาดของจำนวนเต็ม</li>
+                        <li>รองรับการคำนวณทางวิทยาศาสตร์</li>
+                        <li>มีฟังก์ชันคณิตศาสตร์ครบถ้วน</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="types" class="mb-12">
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <h2 class="text-3xl font-bold mb-6">ประเภทของตัวเลข</h2>
+
+                <div class="mb-8">
+                    <h3 class="text-2xl font-bold mb-4">1. Integer (จำนวนเต็ม)</h3>
+                    <p class="mb-4">
+                        จำนวนเต็มที่ไม่มีทศนิยม สามารถเป็นได้ทั้งค่าบวก ค่าลบ และศูนย์
+                    </p>
+                    <div class="code-block bg-gray-100 p-4 rounded-lg mb-4">
+                        <pre>
+                    <code>
+                        # ตัวอย่างการใช้งาน Integer
+                        x = 10          # ค่าบวก
+                        y = -5          # ค่าลบ
+                        z = 0           # ศูนย์
+                        big_num = 1_000_000  # ใช้ _ เพื่อให้อ่านง่าย
+
+                        print(f"x = {x}, type: {type(x)}")
+                        print(f"big_num = {big_num}")
+                    </code>
+                </pre>
+                    </div>
+                </div>
+
+                <div class="mb-8">
+                    <h3 class="text-2xl font-bold mb-4">
+                        2. Floating Point (จำนวนทศนิยม)
+                    </h3>
+                    <p class="mb-4">
+                        จำนวนที่มีจุดทศนิยม สามารถแสดงในรูปแบบปกติหรือสัญกรณ์วิทยาศาสตร์
+                    </p>
+                    <div class="code-block bg-gray-100 p-4 rounded-lg mb-4">
+                        <pre>
+                    <code>
+                        # ตัวอย่างการใช้งาน Floating Point
+                        pi = 3.14159
+                        price = 45.50
+                        tiny = 1e-10    # 0.0000000001
+                        huge = 1e8      # 100000000.0
+
+                        print(f"pi = {pi}")
+                        print(f"tiny in scientific notation = {tiny:e}")
+                    </code>
+                </pre>
+                    </div>
+                </div>
+
+                <div class="mb-8">
+                    <h3 class="text-2xl font-bold mb-4">
+                        3. Complex Numbers (จำนวนเชิงซ้อน)
+                    </h3>
+                    <p class="mb-4">
+                        จำนวนเชิงซ้อนประกอบด้วยส่วนจริงและส่วนจินตภาพ ใช้ j
+                        แทนหน่วยจินตภาพ
+                    </p>
+                    <div class="code-block bg-gray-100 p-4 rounded-lg mb-4">
+                        <pre>
+                    <code>
+                        # ตัวอย่างการใช้งาน Complex Numbers
+                        c1 = 2 + 3j
+                        c2 = complex(1, 2)  # สร้างจาก constructor
+
+                        print(f"c1 = {c1}")
+                        print(f"Real part: {c1.real}")
+                        print(f"Imaginary part: {c1.imag}")
+                    </code>
+                </pre>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="conversion" class="mb-12">
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <h2 class="text-3xl font-bold mb-6">การแปลงชนิดข้อมูลตัวเลข</h2>
+                <p class="mb-4">
+                    Python มีฟังก์ชันสำหรับแปลงชนิดข้อมูลระหว่างตัวเลขประเภทต่างๆ
+                </p>
+
+                <div class="code-block bg-gray-100 p-4 rounded-lg mb-4">
+                    <pre>
+                <code>
+                    # การแปลงเป็น Integer
+                    print(f"int(3.75) = {int(3.75)}")        # ปัดเศษทิ้ง
+                    print(f"int('100') = {int('100')}")      # แปลงจาก string
+                    print(f"int(-3.75) = {int(-3.75)}")      # ปัดเศษทิ้ง
+
+                    # การแปลงเป็น Float
+                    print(f"float(25) = {float(25)}")        # แปลงจาก integer
+                    print(f"float('3.14') = {float('3.14')}") # แปลงจาก string
+
+                    # การแปลงเป็น Complex
+                    print(f"complex(3, 4) = {complex(3, 4)}")
+                </code>
+            </pre>
+                </div>
+
+                <div class="bg-yellow-50 p-4 rounded-lg mb-4">
+                    <p class="font-bold">ข้อควรระวัง:</p>
+                    <ul class="list-disc list-inside">
+                        <li>การแปลงเป็น integer จะปัดเศษทศนิยมทิ้งเสมอ</li>
+                        <li>
+                            ไม่สามารถแปลงจำนวนเชิงซ้อนเป็น integer หรือ float ได้โดยตรง
+                        </li>
+                        <li>
+                            ควรใช้ try-except เพื่อจัดการข้อผิดพลาด
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-blue-50 p-4 rounded-lg">
+                    <p class="font-bold mb-2">ตัวอย่างการจัดการข้อผิดพลาด:</p>
+                    <div class="code-block bg-gray-100 p-4 rounded-lg">
+                        <pre>
+                    <code>
+                        def safe_convert_to_int(value):
+                        try:
+                            return int(value)
+                        except ValueError:
+                            print(f"ไม่สามารถแปลง '{value}' เป็น integer ได้")
+                        return None
+
+                        # ทดสอบ
+                        print(safe_convert_to_int("123"))    # 123
+                        print(safe_convert_to_int("12.34"))  # แสดงข้อความผิดพลาด
+                        print(safe_convert_to_int("abc"))    # แสดงข้อความผิดพลาด
+                    </code>
+                </pre>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container">
+            <div>
+                <h3 class="text-xl font-bold mb-4">ลิงก์ที่เกี่ยวข้อง</h3>
+                <ul class="space-y-2">
+                    <li>
+                        <a href="https://docs.python.org/3/" class="hover:text-blue-300">Python Documentation</a>
+                    </li>
+                    <li>
+                        <a href="https://www.python.org/downloads/" class="hover:text-blue-300">ดาวน์โหลด Python</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <div
+        class="mobile-menu-panel fixed inset-y-0 right-0 max-w-xs w-full bg-white shadow-xl z-50 transform translate-x-full transition-transform duration-200 ease-in-out">
+        <div class="p-6">
+            <button class="mobile-menu-close absolute top-4 right-4">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+            <nav class="mt-8">
+                <ul class="space-y-4">
+                    <li>
+                        <a href="lessons.html" class="block text-lg font-bold">บทเรียน</a>
+                    </li>
+                    <li><a href="examples.html" class="block text-lg">ตัวอย่าง</a></li>
+                    <li>
+                        <a href="exercises.html" class="block text-lg">แบบฝึกหัด</a>
+                    </li>
+                    <li>
+                        <a href="resources.html" class="block text-lg">แหล่งข้อมูล</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 35">
+  <!-- Text "Python" -->
+  <text x="8" y="25" font-family="Arial" font-weight="bold" font-size="22" fill="#FFFFFF">
+    Python
+  </text>
+  
+  <!-- Numbers Symbol -->
+  <text x="80" y="25" font-family="Arial" font-weight="bold" font-size="22" fill="#FFD43B">
+    101
+  </text>
+  
+  <!-- Circle background for numbers -->
+  <circle cx="95" cy="20" r="18" fill="#306998" opacity="0.1"/>
+</svg>
