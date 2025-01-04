@@ -112,6 +112,8 @@ body {
 }
 
 /* Responsive Design */
+/* ปรับขนาดหน้าจอที่มีขนาดใหญ่กว่า 768px
+  ลดขนาด padding และ Font size */
 @media (max-width: 768px) {
   .container {
     padding: 0 var(--spacing-2);
@@ -132,6 +134,8 @@ body {
   gap: var(--spacing-4);
 }
 
+/* ปรับขนาดหน้าจอที่มีขนาดเล็กกว่า 768px
+  ลดขนาด padding และ Font size */
 @media (min-width: 768px) {
   .grid-cols-2 {
     grid-template-columns: repeat(2, 1fr);
